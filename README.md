@@ -13,3 +13,8 @@ possível de acordo com as regras que seguem: (as pontuações podem se acumular
 mesma carta pode ser usada para pontuações de tipos diferentes)
 - 1 ponto para cada carta de mesmo naipe;
 - 2 pontos para cada carta que esteja em sequência de cartas consultivas.
+
+![image](https://github.com/LeoAlves25/Jogo_De_Cartas/assets/99600394/8b7cf854-61b2-46f4-b421-62f6a61a7f52)
+
+
+![image](https://github.com/LeoAlves25/Jogo_De_Cartas/assets/99600394/67f5acd9-8932-413e-a046-a1ed5a164a0e)
