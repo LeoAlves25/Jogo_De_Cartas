@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./img/logo.png" type="image/icon type">
+    <link rel="stylesheet" href="./index.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <title>Projeto 1</title>
+</head>
+
+<body>
+
+    <div class="projeto row justify-content-center">
+
+        <div class="container mb-3">
+
+            <h1 class="text-center fw-bold"> Jogo Cartas</h1>
+
+            <div class="cassino">
+
+                <div class="row justify-content-center mb-3">
+
+                    <div class="jogador col-3 row justify-content-around" id="jogador1">
+
+                        <h6 class="text-center fw-bold">Jogador 1</h6>
+
+                        <div class="carta col-md-3 justify-content-center p-1 ">
+                            <input class="valorCarta text-center col-12" type="text" id="jogador1Valor1" maxlength="2"
+                                style="text-transform:uppercase;color: red;" value="A">
+
+
+                            <select class="naipes col-12 text-center" id="jogador1Naipe1" style="color: red"
+                                onchange="changeColor(this.value, 'jogador1Valor1', this.id)">
+                                <option value="0" style="color: red">&hearts;</option>
+                                <option value="1" style="color: black">&clubs;</option>
+                                <option value="2" style="color: red">&diams;</option>
+                                <option value="3" style="color: black">&spades;</option>
+                            </select>
+                        </div>
+
+                        <div class="carta col-md-3 justify-content-center p-1">
+                            <input class="valorCarta text-center col-12" type="text" id="jogador1Valor2" maxlength="2"
+                                style="text-transform:uppercase;color: red;" value="1">
+
+
+                            <select class="naipes col-12 text-center" id="jogador1Naipe2" style="color: red"
+                                onchange="changeColor(this.value, 'jogador1Valor2', this.id)">
+                                <option value="0" style="color: red">&hearts;</option>
+                                <option value="1" style="color: black">&clubs;</option>
+                                <option value="2" style="color: red">&diams;</option>
+                                <option value="3" style="color: black">&spades;</option>
+                            </select>
+                        </div>
+
+                        <div class="carta col-md-3 justify-content-center p-1">
+                            <input class="valorCarta text-center col-12" type="text" id="jogador1Valor3" maxlength="2"
+                                style="text-transform:uppercase;color: red;" value="2">
+
+
+                            <select class="naipes col-12 text-center" id="jogador1Naipe3" style="color: red"
+                                onchange="changeColor(this.value, 'jogador1Valor3', this.id)">
+                                <option value="0" style="color: red">&hearts;</option>
+                                <option value="1" style="color: black">&clubs;</option>
+                                <option value="2" style="color: red">&diams;</option>
+                                <option value="3" style="color: black">&spades;</option>
+                            </select>
+                        </div>
+
+                        <div class="botoes col-md-3 text-center">
+                            <i class="fa fa-random" onclick="trocarCartaJogador(1)"></i>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- /////////////////////////////////////////////////////////////////////////////////////////// -->
+
+                <div class="row justify-content-around mb-3">
+
+                    <div class="jogador col-3 row justify-content-around" id="jogador2">
+
+                        <h6 class="text-center fw-bold">Jogador 2</h6>
+
+                        <div class="carta col-md-3 justify-content-center p-1 ">
+                            <input class="valorCarta text-center col-12" type="text" id="jogador2Valor1" maxlength="2"
+                                style="text-transform:uppercase;color: red;" value="3">
+
+
+                            <select class="naipes col-12 text-center" id="jogador2Naipe1" style="color: red"
+                                onchange="changeColor(this.value, 'jogador2Valor1', this.id)">
+                                <option value="0" style="color: red">&hearts;</option>
+                                <option value="1" style="color: black">&clubs;</option>
+                                <option value="2" style="color: red">&diams;</option>
+                                <option value="3" style="color: black">&spades;</option>
+                            </select>
+                        </div>
+
+                        <div class="carta col-md-3 justify-content-center p-1">
+                            <input class="valorCarta text-center col-12" type="text" id="jogador2Valor2" maxlength="2"
+                                style="text-transform:uppercase;color: red;" value="4">
+
+
+                            <select class="naipes col-12 text-center" id="jogador2Naipe2" style="color: red"
+                                onchange="changeColor(this.value, 'jogador2Valor2', this.id)">
+                                <option value="0" style="color: red">&hearts;</option>
+                                <option value="1" style="color: black">&clubs;</option>
+                                <option value="2" style="color: red">&diams;</option>
+                                <option value="3" style="color: black">&spades;</option>
+                            </select>
+                        </div>
+
+                        <div class="carta col-md-3 justify-content-center p-1">
+                            <input class="valorCarta text-center col-12" type="text" id="jogador2Valor3" maxlength="2"
+                                style="text-transform:uppercase;color: red;" value="5">
+
+
+                            <select class="naipes col-12 text-center" id="jogador2Naipe3" style="color: red"
+                                onchange="changeColor(this.value, 'jogador2Valor3', this.id)">
+                                <option value="0" style="color: red">&hearts;</option>
+                                <option value="1" style="color: black">&clubs;</option>
+                                <option value="2" style="color: red">&diams;</option>
+                                <option value="3" style="color: black">&spades;</option>
+                            </select>
+                        </div>
+
+                        <div class="botoes col-md-3 text-center">
+                            <i class="fa fa-random" onclick="trocarCartaJogador(2)"></i>
+                        </div>
+
+                    </div>
+
+                    <!-- ///////////////////////////////////////////////////////////////////////////////////// -->
+
+                    <div class="mesa col-3 row justify-content-around" id="mesa">
+
+                        <h6 class="text-center fw-bold">Mesa</h6>
+
+                        <div class="carta col-md-3 justify-content-center p-1 ">
+                            <input class="valorCarta text-center col-12" type="text" id="mesaValor1" maxlength="2"
+                                style="text-transform:uppercase;color: red;" value="6">
+
+
+                            <select class="naipes col-12 text-center" id="mesaNaipe1" style="color: red"
+                                onchange="changeColor(this.value, 'mesaValor1', this.id)">
+                                <option value="0" style="color: red">&hearts;</option>
+                                <option value="1" style="color: black">&clubs;</option>
+                                <option value="2" style="color: red">&diams;</option>
+                                <option value="3" style="color: black">&spades;</option>
+                            </select>
+                        </div>
+
+                        <div class="carta col-md-3 justify-content-center p-1">
+                            <input class="valorCarta text-center col-12" type="text" id="mesaValor2" maxlength="2"
+                                style="text-transform:uppercase;color: red;" value="7">
+
+
+                            <select class="naipes col-12 text-center" id="mesaNaipe2" style="color: red"
+                                onchange="changeColor(this.value, 'mesaValor2', this.id)">
+                                <option value="0" style="color: red">&hearts;</option>
+                                <option value="1" style="color: black">&clubs;</option>
+                                <option value="2" style="color: red">&diams;</option>
+                                <option value="3" style="color: black">&spades;</option>
+                            </select>
+                        </div>
+
+                        <div class="botoes col-md-3 text-center">
+                            <i class="fa fa-random" onclick="trocarCartaMesa()"></i>
+                        </div>
+
+                    </div>
+
+                    <!-- ///////////////////////////////////////////////////////////////////////////////////// -->
+
+                    <div class="jogador col-3 row justify-content-around" id="jogador3">
+
+                        <h6 class="text-center fw-bold">Jogador 3</h6>
+
+                        <div class="carta col-md-3 justify-content-center p-1 ">
+                            <input class="valorCarta text-center col-12" type="text" id="jogador3Valor1" maxlength="2"
+                                style="text-transform:uppercase;color: red;" value="8">
+
+
+                            <select class="naipes col-12 text-center" id="jogador3Naipe1" style="color: red"
+                                onchange="changeColor(this.value, 'jogador3Valor1', this.id)">
+                                <option value="0" style="color: red">&hearts;</option>
+                                <option value="1" style="color: black">&clubs;</option>
+                                <option value="2" style="color: red">&diams;</option>
+                                <option value="3" style="color: black">&spades;</option>
+                            </select>
+                        </div>
+
+                        <div class="carta col-md-3 justify-content-center p-1">
+                            <input class="valorCarta text-center col-12" type="text" id="jogador3Valor2" maxlength="2"
+                                style="text-transform:uppercase;color: red;" value="9">
+
+
+                            <select class="naipes col-12 text-center" id="jogador3Naipe2" style="color: red"
+                                onchange="changeColor(this.value, 'jogador3Valor2', this.id)">
+                                <option value="0" style="color: red">&hearts;</option>
+                                <option value="1" style="color: black">&clubs;</option>
+                                <option value="2" style="color: red">&diams;</option>
+                                <option value="3" style="color: black">&spades;</option>
+                            </select>
+                        </div>
+
+                        <div class="carta col-md-3 justify-content-center p-1">
+                            <input class="valorCarta text-center col-12" type="text" id="jogador3Valor3" maxlength="2"
+                                style="text-transform:uppercase;color: red;" value="10">
+
+
+                            <select class="naipes col-12 text-center" id="jogador3Naipe3" style="color: red"
+                                onchange="changeColor(this.value, 'jogador3Valor3', this.id)">
+                                <option value="0" style="color: red">&hearts;</option>
+                                <option value="1" style="color: black">&clubs;</option>
+                                <option value="2" style="color: red">&diams;</option>
+                                <option value="3" style="color: black">&spades;</option>
+                            </select>
+                        </div>
+
+                        <div class="botoes col-md-3 text-center">
+                            <i class="fa fa-random" onclick="trocarCartaJogador(3)"></i>
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+                <!-- ///////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+                <div class="row justify-content-center">
+                    <div class="jogador col-3 row justify-content-around" id="jogador4">
+
+                        <h6 class="text-center fw-bold">Jogador 4</h6>
+
+                        <div class="carta col-md-3 justify-content-center p-1 ">
+                            <input class="valorCarta text-center col-12" type="text" id="jogador4Valor1" maxlength="2"
+                                style="text-transform:uppercase;color: red;" value="J">
+
+
+                            <select class="naipes col-12 text-center" id="jogador4Naipe1" style="color: red"
+                                onchange="changeColor(this.value, 'jogador4Valor1', this.id)">
+                                <option value="0" style="color: red">&hearts;</option>
+                                <option value="1" style="color: black">&clubs;</option>
+                                <option value="2" style="color: red">&diams;</option>
+                                <option value="3" style="color: black">&spades;</option>
+                            </select>
+                        </div>
+
+                        <div class="carta col-md-3 justify-content-center p-1">
+                            <input class="valorCarta text-center col-12" type="text" id="jogador4Valor2" maxlength="2"
+                                style="text-transform:uppercase;color: red;" value="Q">
+
+
+                            <select class="naipes col-12 text-center" id="jogador4Naipe2" style="color: red"
+                                onchange="changeColor(this.value, 'jogador4Valor2', this.id)">
+                                <option value="0" style="color: red">&hearts;</option>
+                                <option value="1" style="color: black">&clubs;</option>
+                                <option value="2" style="color: red">&diams;</option>
+                                <option value="3" style="color: black">&spades;</option>
+                            </select>
+                        </div>
+
+                        <div class="carta col-md-3 justify-content-center p-1">
+                            <input class="valorCarta text-center col-12" type="text" id="jogador4Valor3" maxlength="2"
+                                style="text-transform:uppercase;color: red;" value="K">
+
+
+                            <select class="naipes col-12 text-center" id="jogador4Naipe3" style="color: red"
+                                onchange="changeColor(this.value, 'jogador4Valor3', this.id)">
+                                <option value="0" style="color: red">&hearts;</option>
+                                <option value="1" style="color: black">&clubs;</option>
+                                <option value="2" style="color: red">&diams;</option>
+                                <option value="3" style="color: black">&spades;</option>
+                            </select>
+                        </div>
+
+                        <div class="botoes col-md-3 text-center">
+                            <i class="fa fa-random" onclick="trocarCartaJogador(4)"></i>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div id="resultado" class="resultado" style="display: none;">
+            <p id="resultadoPlaca" class="text-center"></p>
+        </div>
+
+        <div class="btn-group justify-content-center">
+            <button type="button" class="btn btn-primary" id="btnGerar" onclick="addCartasMesa()">Gerar todos</button>
+            <button type="button" class="btn btn-success" id="btnSalvar" data-bs-toggle="modal"
+                data-bs-target="#exampleModal" onclick="calcularPontos()">Verificar</button>
+        </div>
+
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Maiores pontuações</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+
+                <div class="modal-body">
+                    <div class="row justify-content-center">
+                        <div class="jogador col-3 row justify-content-around mb-2">
+
+                            <h6 class="text-center fw-bold">Jogador 1</h6>
+
+                            <div class="carta col-md-3 justify-content-center p-1 ">
+                                <input class="valorCarta text-center col-12" type="text" id="jogador1Valor1Resultado"
+                                    maxlength="2" style="text-transform:uppercase;color: red;" value="J">
+
+
+                                <select class="naipes col-12 text-center" id="jogador1Naipe1Resultado"
+                                    style="color: red"
+                                    onchange="changeColor(this.value, 'jogador1Valor1Resultado', this.id)">
+                                    <option value="0" style="color: red">&hearts;</option>
+                                    <option value="1" style="color: black">&clubs;</option>
+                                    <option value="2" style="color: red">&diams;</option>
+                                    <option value="3" style="color: black">&spades;</option>
+                                </select>
+                            </div>
+
+                            <div class="carta col-md-3 justify-content-center p-1">
+                                <input class="valorCarta text-center col-12" type="text" id="jogador1Valor2Resultado"
+                                    maxlength="2" style="text-transform:uppercase;color: red;" value="Q">
+
+
+                                <select class="naipes col-12 text-center" id="jogador1Naipe2Resultado"
+                                    style="color: red"
+                                    onchange="changeColor(this.value, 'jogador1Valor2Resultado', this.id)">
+                                    <option value="0" style="color: red">&hearts;</option>
+                                    <option value="1" style="color: black">&clubs;</option>
+                                    <option value="2" style="color: red">&diams;</option>
+                                    <option value="3" style="color: black">&spades;</option>
+                                </select>
+                            </div>
+
+                            <div class="carta col-md-3 justify-content-center p-1">
+                                <input class="valorCarta text-center col-12" type="text" id="jogador1Valor3Resultado"
+                                    maxlength="2" style="text-transform:uppercase;color: red;" value="K">
+
+
+                                <select class="naipes col-12 text-center" id="jogador1Naipe3Resultado"
+                                    style="color: red"
+                                    onchange="changeColor(this.value, 'jogador1Valor3Resultado', this.id)">
+                                    <option value="0" style="color: red">&hearts;</option>
+                                    <option value="1" style="color: black">&clubs;</option>
+                                    <option value="2" style="color: red">&diams;</option>
+                                    <option value="3" style="color: black">&spades;</option>
+                                </select>
+                            </div>
+
+                            <div class="pontos col-md-3 text-center">
+                                <i id="jogador1Ponto"></i>
+                            </div>
+
+                        </div>
+
+                        <div class="row justify-content-center">
+                            <div class="jogador col-3 row justify-content-around mb-2">
+
+                                <h6 class="text-center fw-bold">Jogador 2</h6>
+
+                                <div class="carta col-md-3 justify-content-center p-1 ">
+                                    <input class="valorCarta text-center col-12" type="text"
+                                        id="jogador2Valor1Resultado" maxlength="2"
+                                        style="text-transform:uppercase;color: red;" value="J">
+
+
+                                    <select class="naipes col-12 text-center" id="jogador2Naipe1Resultado"
+                                        style="color: red"
+                                        onchange="changeColor(this.value, 'jogador2Valor1Resultado', this.id)">
+                                        <option value="0" style="color: red">&hearts;</option>
+                                        <option value="1" style="color: black">&clubs;</option>
+                                        <option value="2" style="color: red">&diams;</option>
+                                        <option value="3" style="color: black">&spades;</option>
+                                    </select>
+                                </div>
+
+                                <div class="carta col-md-3 justify-content-center p-1">
+                                    <input class="valorCarta text-center col-12" type="text"
+                                        id="jogador2Valor2Resultado" maxlength="2"
+                                        style="text-transform:uppercase;color: red;" value="Q">
+
+
+                                    <select class="naipes col-12 text-center" id="jogador2Naipe2Resultado"
+                                        style="color: red"
+                                        onchange="changeColor(this.value, 'jogador2Valor2Resultado', this.id)">
+                                        <option value="0" style="color: red">&hearts;</option>
+                                        <option value="1" style="color: black">&clubs;</option>
+                                        <option value="2" style="color: red">&diams;</option>
+                                        <option value="3" style="color: black">&spades;</option>
+                                    </select>
+                                </div>
+
+                                <div class="carta col-md-3 justify-content-center p-1">
+                                    <input class="valorCarta text-center col-12" type="text"
+                                        id="jogador2Valor3Resultado" maxlength="2"
+                                        style="text-transform:uppercase;color: red;" value="K">
+
+
+                                    <select class="naipes col-12 text-center" id="jogador2Naipe3Resultado"
+                                        style="color: red"
+                                        onchange="changeColor(this.value, 'jogador2Valor3Resultado', this.id)">
+                                        <option value="0" style="color: red">&hearts;</option>
+                                        <option value="1" style="color: black">&clubs;</option>
+                                        <option value="2" style="color: red">&diams;</option>
+                                        <option value="3" style="color: black">&spades;</option>
+                                    </select>
+                                </div>
+
+                                <div class="pontos col-md-3 text-center">
+                                    <i id="jogador2Ponto"></i>
+                                </div>
+
+                            </div>
+
+                            <div class="row justify-content-center">
+                                <div class="jogador col-3 row justify-content-around mb-2">
+
+                                    <h6 class="text-center fw-bold">Jogador 3</h6>
+
+                                    <div class="carta col-md-3 justify-content-center p-1 ">
+                                        <input class="valorCarta text-center col-12" type="text"
+                                            id="jogador3Valor1Resultado" maxlength="2"
+                                            style="text-transform:uppercase;color: red;" value="J">
+
+
+                                        <select class="naipes col-12 text-center" id="jogador3Naipe1Resultado"
+                                            style="color: red"
+                                            onchange="changeColor(this.value, 'jogador3Valor1Resultado', this.id)">
+                                            <option value="0" style="color: red">&hearts;</option>
+                                            <option value="1" style="color: black">&clubs;</option>
+                                            <option value="2" style="color: red">&diams;</option>
+                                            <option value="3" style="color: black">&spades;</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="carta col-md-3 justify-content-center p-1">
+                                        <input class="valorCarta text-center col-12" type="text"
+                                            id="jogador3Valor2Resultado" maxlength="2"
+                                            style="text-transform:uppercase;color: red;" value="Q">
+
+
+                                        <select class="naipes col-12 text-center" id="jogador3Naipe2Resultado"
+                                            style="color: red"
+                                            onchange="changeColor(this.value, 'jogador3Valor2Resultado', this.id)">
+                                            <option value="0" style="color: red">&hearts;</option>
+                                            <option value="1" style="color: black">&clubs;</option>
+                                            <option value="2" style="color: red">&diams;</option>
+                                            <option value="3" style="color: black">&spades;</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="carta col-md-3 justify-content-center p-1">
+                                        <input class="valorCarta text-center col-12" type="text"
+                                            id="jogador3Valor3Resultado" maxlength="2"
+                                            style="text-transform:uppercase;color: red;" value="K">
+
+
+                                        <select class="naipes col-12 text-center" id="jogador3Naipe3Resultado"
+                                            style="color: red"
+                                            onchange="changeColor(this.value, 'jogador3Valor3Resultado', this.id)">
+                                            <option value="0" style="color: red">&hearts;</option>
+                                            <option value="1" style="color: black">&clubs;</option>
+                                            <option value="2" style="color: red">&diams;</option>
+                                            <option value="3" style="color: black">&spades;</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="pontos col-md-3 text-center">
+                                        <i id="jogador3Ponto"></i>
+                                    </div>
+
+                                </div>
+
+                                <div class="row justify-content-center">
+                                    <div class="jogador col-3 row justify-content-around mb-2">
+
+                                        <h6 class="text-center fw-bold">Jogador 4</h6>
+
+                                        <div class="carta col-md-3 justify-content-center p-1 ">
+                                            <input class="valorCarta text-center col-12" type="text"
+                                                id="jogador4Valor1Resultado" maxlength="2"
+                                                style="text-transform:uppercase;color: red;" value="J">
+
+
+                                            <select class="naipes col-12 text-center" id="jogador4Naipe1Resultado"
+                                                style="color: red"
+                                                onchange="changeColor(this.value, 'jogador4Valor1Resultado', this.id)">
+                                                <option value="0" style="color: red">&hearts;</option>
+                                                <option value="1" style="color: black">&clubs;</option>
+                                                <option value="2" style="color: red">&diams;</option>
+                                                <option value="3" style="color: black">&spades;</option>
+                                            </select>
+                                        </div>
+
+                                        <div class="carta col-md-3 justify-content-center p-1">
+                                            <input class="valorCarta text-center col-12" type="text"
+                                                id="jogador4Valor2Resultado" maxlength="2"
+                                                style="text-transform:uppercase;color: red;" value="Q">
+
+
+                                            <select class="naipes col-12 text-center" id="jogador4Naipe2Resultado"
+                                                style="color: red"
+                                                onchange="changeColor(this.value, 'jogador4Valor2Resultado', this.id)">
+                                                <option value="0" style="color: red">&hearts;</option>
+                                                <option value="1" style="color: black">&clubs;</option>
+                                                <option value="2" style="color: red">&diams;</option>
+                                                <option value="3" style="color: black">&spades;</option>
+                                            </select>
+                                        </div>
+
+                                        <div class="carta col-md-3 justify-content-center p-1">
+                                            <input class="valorCarta text-center col-12" type="text"
+                                                id="jogador4Valor3Resultado" maxlength="2"
+                                                style="text-transform:uppercase;color: red;" value="K">
+
+
+                                            <select class="naipes col-12 text-center" id="jogador4Naipe3Resultado"
+                                                style="color: red"
+                                                onchange="changeColor(this.value, 'jogador4Valor3Resultado', this.id)">
+                                                <option value="0" style="color: red">&hearts;</option>
+                                                <option value="1" style="color: black">&clubs;</option>
+                                                <option value="2" style="color: red">&diams;</option>
+                                                <option value="3" style="color: black">&spades;</option>
+                                            </select>
+                                        </div>
+
+                                        <div class="pontos col-md-3 text-center">
+                                            <i id="jogador4Ponto"></i>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-primary"
+                                        data-bs-dismiss="modal">Fechar</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <script>
+                        var myModal = document.getElementById('myModal')
+                        var myInput = document.getElementById('myInput')
+
+                        myModal.addEventListener('shown.bs.modal', function () {
+                            myInput.focus()
+                        })
+                    </script>
+</body>
+
+<script src="index.js"></script>
+
+</html>

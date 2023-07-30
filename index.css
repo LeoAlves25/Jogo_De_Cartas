@@ -1,0 +1,121 @@
+@font-face {
+    font-family: deckCard;
+    src: url(./font/PokerInOctober-Demo.otf);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+h1 {
+    font-family: mercoSul;
+}
+
+html {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    background: rgb(68, 58, 19);
+    background: linear-gradient(127deg, rgba(68, 58, 19, 1) 0%, rgba(138, 100, 39, 1) 50%, rgba(138, 97, 29, 1) 54%, rgba(68, 58, 19, 1) 100%);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+body {
+    width: 1000px;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 25px;
+}
+
+.projeto {
+    width: 100%;
+    height: auto;
+    margin-top: 10px !important;
+    margin-bottom: 10px !important;
+}
+
+.cassino {
+    padding: 5px;
+    padding-top: 15px;
+    border-radius: 25px;
+    height: 490px;
+    border-style: solid;
+    border-width: 5px;
+    border-color: black;
+    background: rgb(28, 85, 9);
+    background: linear-gradient(127deg, rgba(28, 85, 9, 1) 0%, rgba(80, 170, 30, 1) 100%, rgba(4, 236, 77, 1) 100%, rgba(0, 255, 102, 1) 100%);
+}
+
+.jogador {
+    height: 140px;
+    width: 300px !important;
+    background-color: rgb(146, 146, 146);
+    border-radius: 15px;
+    border-width: 2px;
+    border-style: solid;
+    border-color: black;
+    align-items: center;
+}
+
+.mesa {
+    height: 140px;
+    width: 230px !important;
+    background-color: rgb(146, 146, 146);
+    border-radius: 15px;
+    border-width: 2px;
+    border-style: solid;
+    border-color: black;
+    align-items: center;
+}
+
+.carta {
+    height: 60%;
+    width: 55px !important;
+    background-color: rgb(255, 255, 255);
+    border-radius: 5px;
+}
+
+.carta input {
+    width: 90%;
+    border: none;
+    font-family: deckCard;
+    font-size: 23px;
+}
+
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    text-indent: 1px;
+    text-overflow: '';
+    border: none;
+}
+
+.naipes{
+    font-size: 25px;
+    cursor: pointer;
+}
+
+.botoes, .pontos{
+    height: 35%;
+    width: 50px !important;
+    background-color: rgb(255, 255, 255);
+    border-radius: 5px;
+    font-size: 30px;
+}
+
+.botoes i{
+    cursor: pointer;
+}
+
+.pontos{
+    font-family: deckCard;
+}
+
+.container {
+    width: 100px I !important;
+}
